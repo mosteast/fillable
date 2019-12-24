@@ -1,1 +1,1 @@
-export * from './src'
+export { Fillable } from './src/fillable'

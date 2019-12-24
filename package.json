@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "homepage": "https://github.com/mosteast/fillable",
   "repository": "github:mosteast/fillable",
-  "description": "xxx",
+  "description": "Base class for fillable objects.",
   "main": "build/index.js",
   "type": "build/index.d.ts",
   "files": [
