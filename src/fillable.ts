@@ -5,7 +5,17 @@ export interface T_fill_opt {
 
 const def = {}
 
-export class Fillable {
+export interface T_fillable {
+  before_fill?(obj: object, me: this): void
+
+  on_fill?(key: string, value: any, obj: object, me: this): void
+
+  after_fill?(obj: object, me: this): void
+
+  [key: string]: any
+}
+
+export class Fillable implements T_fillable {
   [key: string]: any
 
   /**
@@ -35,7 +45,7 @@ export class Fillable {
       const value = obj[key]
 
       if (this.on_fill) {
-        this.on_fill(value, key, obj)
+        this.on_fill(key, value, obj, this)
       }
 
       this[key] = value
