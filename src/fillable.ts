@@ -12,6 +12,8 @@ export interface T_fillable {
 
   after_fill?(obj: object, me: this): void
 
+  fill(obj: object, opt: T_fill_opt): this
+
   [key: string]: any
 }
 
@@ -54,5 +56,7 @@ export class Fillable implements T_fillable {
     if (this.after_fill) {
       this.after_fill(obj, this)
     }
+
+    return this
   }
 }
