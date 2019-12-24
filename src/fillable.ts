@@ -6,10 +6,6 @@ export interface T_fill_opt {
 const def = {}
 
 export class Fillable {
-  on_fill?: Function
-  before_fill?: Function
-  after_fill?: Function
-
   [key: string]: any
 
   /**
